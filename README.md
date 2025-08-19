@@ -2,7 +2,7 @@
 
 The code provided here demonstrates the key functionality of the thickness inversion as described in Frank et al. (2023) and applied in "Unveiling the Hidden Lake-Rich Landscapes Under Earth’s Glaciers" (Frank et al., 2025). 
 
-It constitutes a module of the Instructed Glacier Model (IGM; Jouvet et al., 2022) v2.2.1 available [here](https://github.com/instructed-glacier-model/igm/releases/tag/v2.2.1). For instructions on how to use IGM, please refer to the documentation in the corresponding repository.
+It constitutes a module of the Instructed Glacier Model (IGM; Jouvet et al., 2022) v2.2.1 available [here](https://github.com/instructed-glacier-model/igm/releases/tag/v2.2.1). For instructions on how to use IGM, please refer to the documentation in the corresponding repository. Necessary input data will be downloaded when this code is run within IGM, so no additional files are needed.
 
 _Importantly, this code only runs a toy example and does not produce output used in Frank et al. (2025)._ \
 Specifically, it performs a simple thickness and friction inversion for Storglaciären using made-up mass balance forcing. For it to be used in a meaningful way, use realistic mass balance and dh/dt forcing and ensure that all input datasets are consistent with each other.\
