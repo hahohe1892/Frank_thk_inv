@@ -1,0 +1,16 @@
+*~
+slurm*.out
+memory-pie.png
+memory-statistics.txt
+computational-pie.png
+computational-statistics.txt
+params_saved.json
+clean.sh
+*_output.nc
+ts_*_output.nc
+jobscript_igm2
+__pycache__
+*_lakes.tif
+Inversion/private/
+optimization_logs.log
+validation_stats.csv
