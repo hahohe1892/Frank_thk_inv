@@ -39,7 +39,7 @@ The glacier thickness inversion is performed by the script `Inversion/topg_inv.p
 - Installation instructions: [IGM Wiki  Installation](https://github.com/instructed-glacier-model/igm/wiki/1.-Installation)  
 - Running instructions: [IGM Wiki  Running IGM](https://github.com/instructed-glacier-model/igm/wiki/3.-Runing-IGM)  
 
-Beyond IGM and its dependencies, the Bayesian calibration requires the (bayesian-optimization package)[https://github.com/bayesian-optimization/BayesianOptimization] (Nogueira, 2014) to be installed. The script `prepro.py` handles preprocessing and is also a module of IGM, while `loop_script.sh` is a bash script to do the inversion for several glaciers sequentially.
+Beyond IGM and its dependencies, the Bayesian calibration requires the [bayesian-optimization package](https://github.com/bayesian-optimization/BayesianOptimization) (Nogueira, 2014) to be installed. The script `prepro.py` handles preprocessing and is also a module of IGM, while `loop_script.sh` is a bash script to do the inversion for several glaciers sequentially.
 
 The script `optimizer.py` is a wrapper that perfoms Bayesian calibration of model parameters for a set of glaciers by iteratively running the thickness inversion and minimizing a cost function. The cost function is eq. (4) in Frank et al. (2025). To run the example provided, follow these steps:
 
@@ -87,7 +87,7 @@ The output is stored as a **NetCDF** file in the run folder. It includes:
 
 Lakes in the subglacial topography are identified using a sink-fill algorithm (Zhou et al., 2016) implemented in [RichDEM](https://richdem.readthedocs.io/en/latest/).  
 
-To run the provided example, navigate to the `Lakes` folder and execute:
+To run the provided example, install `RichDEM`, then navigate to the `Lakes` folder and execute:
 ```bash
 python map_lakes.py
 ```
@@ -97,7 +97,7 @@ To apply the code to other subglacial topographies, provide a list of file paths
 
 ## Hardware Requirements
 
-The inversion runs efficiently on GPUs and was tested on an **NVIDIA A40 GPU (48 GB VRAM)** with a runtime of ~40 minutes.  
+The inversion runs efficiently on GPUs and was tested on an **NVIDIA A40 GPU (48 GB VRAM)** with a runtime of ~x hours.  
 Note: Memory requirements may exceed the capacity of smaller GPUs.
 
 The lake mapping runs within seconds on the provided examples.
