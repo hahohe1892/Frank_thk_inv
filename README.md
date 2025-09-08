@@ -34,14 +34,14 @@ To run the code, clone the repository and ensure that the dependencies listed be
 ---
 ## Thickness Inversion
 
-The glacier thickness inversion is performed by the script `Inversion/topg_inv.py`, which is a module of the Instructed Glacier Model (IGM; Jouvet and Cordonnier, 2023). For this study, [IGMv2.2.1](https://github.com/instructed-glacier-model/igm/releases/tag/v2.2.1) was used.  
+The glacier thickness inversion is performed by the script `Inversion/code/topg_inv.py`, which is a module of the Instructed Glacier Model (IGM; Jouvet and Cordonnier, 2023). For this study, [IGMv2.2.1](https://github.com/instructed-glacier-model/igm/releases/tag/v2.2.1) was used.  
 
 - Installation instructions: [IGM Wiki  Installation](https://github.com/instructed-glacier-model/igm/wiki/1.-Installation)  
 - Running instructions: [IGM Wiki  Running IGM](https://github.com/instructed-glacier-model/igm/wiki/3.-Runing-IGM)  
 
-Beyond IGM and its dependencies, the Bayesian calibration requires the [bayesian-optimization package](https://github.com/bayesian-optimization/BayesianOptimization) (Nogueira, 2014) to be installed. The script `prepro.py` handles preprocessing and is also a module of IGM, while `loop_script.sh` is a bash script to do the inversion for several glaciers sequentially.
+Beyond IGM and its dependencies, the Bayesian calibration requires the [bayesian-optimization package](https://github.com/bayesian-optimization/BayesianOptimization) (Nogueira, 2014) to be installed. The script `Inversion/code/prepro.py` handles preprocessing and is also a module of IGM, while `Inversion/code/loop_script.sh` is a bash script to do the inversion for several glaciers sequentially.
 
-The script `optimizer.py` is a wrapper that perfoms Bayesian calibration of model parameters for a set of glaciers by iteratively running the thickness inversion and minimizing a cost function. The cost function is eq. (4) in Frank et al. (2025). To run the example provided, follow these steps:
+The script `Inversion/code/optimizer.py` is a wrapper that perfoms Bayesian calibration of model parameters for a set of glaciers by iteratively running the thickness inversion and minimizing a cost function. The cost function is eq. (4) in Frank et al. (2025). To run the example provided, follow these steps:
 
 After successful installation of IGM and `bayesian-optimization`, navigate to `Inversion/code`. The necessary input data for five Greenlandic glaciers with thickness observations is prepared and stored under `Inversion/Input_data`. Fixed model parameters are defined in `Inversion/code/params.json`.  
 
