@@ -271,7 +271,7 @@ def create_script(glaciers, experiments):
         file.write('\n')
         file.write('do\n')
         file.write('\techo "Processing $param"\n')
-        file.write('\tpython3 ../../../igm2.2.1/igm/igm_run.py ' +
+        file.write('\tpython3 igm_run ' +
                    '--lncd_input_file ../Input_data/"$param"_input.nc ' +
                    '--wncd_output_file ../Output_data/"$param"_output_{}.nc '.format(params_string) +
                    '--wts_output_file ../Output_data/"$param"_ts_{}.nc '.format(params_string))
