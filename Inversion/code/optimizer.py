@@ -63,7 +63,7 @@ def full_optimization(next_run, params, n_iter, old_log_paths = [], kappa = 10):
         random_state=1,
     )
 
-    if len(old_old_paths) > 0:
+    if len(old_log_paths) > 0:
         for o,old_log_path in enumerate(old_log_paths):
             shutil.copyfile(old_log_path, './old_log{}.log'.format(o))
         load_logs(optimizer, logs=old_log_paths)
@@ -271,8 +271,8 @@ def create_script(glaciers, experiments):
         file.write('\n')
         file.write('do\n')
         file.write('\techo "Processing $param"\n')
-        file.write('\tpython3 igm_run ' +
-                   '--lncd_input_file ../Input_data/$param_input.nc ' +
+        file.write('\tpython3 ../../../igm2.2.1/igm/igm_run.py ' +
+                   '--lncd_input_file ../Input_data/"$param"_input.nc ' +
                    '--wncd_output_file ../Output_data/"$param"_output_{}.nc '.format(params_string) +
                    '--wts_output_file ../Output_data/"$param"_ts_{}.nc '.format(params_string))
         for key in experiments:
