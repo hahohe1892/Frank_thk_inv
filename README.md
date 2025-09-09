@@ -1,4 +1,5 @@
-# <h1 align="center" id="title">Code Supplement to: *Unveiling the Hidden Lake-Rich Landscapes Under Earth’s Glaciers*</h1>
+# <h1 align="center" id="title">Code Supplement to:<br> *Unveiling the Hidden Lake-Rich Landscapes Under Earth’s Glaciers*</h1>
+<p align="center"><img src="https://github.com/hahohe1892/Frank_thk_inv/blob/main/Cover_picture.PNG" alt="drawing" width="500"/></p>
 
 This repository contains the Python code used for the glacier thickness inversion and lake mapping analyses presented in *Unveiling the Hidden Lake-Rich Landscapes Under Earth’s Glaciers* (Frank et al., 2025). Specifically, it performs the inversion including calibration of regional parameters and calculates the locations and depths of lakes that would form if glaciers were to melt completely.  
 
@@ -6,7 +7,7 @@ To run the code, clone the repository and ensure that the dependencies listed be
 
 ---
 
-## Quick Start
+## Quick Overview
 
 1. **Clone the repository**  
    ```bash
@@ -43,7 +44,7 @@ Beyond IGM and its dependencies, the Bayesian calibration requires the [bayesian
 
 The script `Inversion/code/optimizer.py` is a wrapper that perfoms Bayesian calibration of model parameters for a set of glaciers by iteratively running the thickness inversion and minimizing a cost function. The cost function is eq. (4) in Frank et al. (2025). To run the example provided, follow these steps:
 
-After successful installation of IGM and `bayesian-optimization`, navigate to `Inversion/code`. The necessary input data for five Greenlandic glaciers with thickness observations is prepared and stored under `Inversion/Input_data`. Fixed model parameters are defined in `Inversion/code/params.json`.  
+After successful installation of IGM and `bayesian-optimization`, navigate to `Inversion/code`. The necessary input data for five Greenlandic glacier complexes with thickness observations is prepared and stored under `Inversion/Input_data`. Fixed model parameters are defined in `Inversion/code/params.json`.  
 
 From within the folder, run:
 ```bash
@@ -51,7 +52,7 @@ python optimizer.py
 ```
 
 This performs the following steps, optimizing the model parameters ice viscosity `A`, sliding coefficient `c`, regularization parameter `theta`and velocity multiplier `vel_Mult`:
-1. Runs the inversion for all five glaciers using defined initial parameters.
+1. Runs the inversion for all five glacier complexes using defined initial parameters.
 2. Stores output **NetCDF** files in `Inversion/Output_data/`
 3. Calculates the cost function eq.(4) based on the differences in observed and modeled thicknesses and velocities.
 4. Suggests a new parameter combination to probe such that the likelihood of overlooking a minimum in the cost function is minimized.
@@ -97,7 +98,7 @@ To apply the code to other subglacial topographies, provide a list of file paths
 
 ## Hardware Requirements
 
-The inversion runs efficiently on GPUs and was tested on an **NVIDIA A40 GPU (48 GB VRAM)** with a runtime of ~x hours.  
+The inversion runs efficiently on GPUs and was tested on an **NVIDIA A40 GPU (48 GB VRAM)** with a runtime of ~21 hours. To reduce computational time for testing, decrease `n`.  
 Note: Memory requirements may exceed the capacity of smaller GPUs.
 
 The lake mapping runs within seconds on the provided examples.
