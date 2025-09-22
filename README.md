@@ -40,7 +40,7 @@ The glacier thickness inversion is performed by the script `Inversion/code/topg_
 - Installation instructions: [IGM Wiki  Installation](https://github.com/instructed-glacier-model/igm/wiki/1.-Installation)  
 - Running instructions: [IGM Wiki  Running IGM](https://github.com/instructed-glacier-model/igm/wiki/3.-Runing-IGM)  
 
-Beyond IGM and its dependencies, the Bayesian calibration requires the [bayesian-optimization package](https://github.com/bayesian-optimization/BayesianOptimization) (Nogueira, 2014) to be installed. The script `Inversion/code/prepro.py` handles preprocessing and is also a module of IGM, while `Inversion/code/loop_script.sh` is a bash script to do the inversion for several glaciers sequentially.
+Beyond IGM and its dependencies, the Bayesian calibration requires the [bayesian-optimization package](https://bayesian-optimization.github.io/BayesianOptimization/3.1.0/) [v2.0](https://github.com/bayesian-optimization/BayesianOptimization/releases/tag/v2.0.0) (Nogueira, 2014) to be installed. The script `Inversion/code/prepro.py` handles preprocessing and is also a module of IGM, while `Inversion/code/loop_script.sh` is a bash script to do the inversion for several glaciers sequentially.
 
 The script `Inversion/code/optimizer.py` is a wrapper that perfoms Bayesian calibration of model parameters for a set of glaciers by iteratively running the thickness inversion and minimizing a cost function. The cost function is eq. (4) in Frank et al. (2025). To run the example provided, follow these steps:
 
