@@ -1,4 +1,4 @@
-# <h1 align="center" id="title">Code Supplement to:<br> *Unveiling the Hidden Lake-Rich Landscapes Under Earth’s Glaciers*</h1>
+# <h1 align="center" id="title">Code Supplement to:<br> *Global glacier-free topography reveals large potential for future lakes in presently ice-covered terrain*</h1>
 <p align="center"><img src="https://github.com/hahohe1892/Frank_thk_inv/blob/main/Cover_picture.PNG" alt="drawing" width="500"/></p>
 
 This repository contains the Python code used for the glacier thickness inversion and lake mapping analyses presented in *Global glacier-free topography reveals large potential for future lakes in presently ice-covered terrain* (Frank et al., 2026). Specifically, it performs the inversion including calibration of regional parameters and calculates the locations and depths of lakes that would form if glaciers were to melt completely.  
