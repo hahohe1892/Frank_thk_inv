@@ -1,7 +1,7 @@
 # <h1 align="center" id="title">Code Supplement to:<br> *Unveiling the Hidden Lake-Rich Landscapes Under Earth’s Glaciers*</h1>
 <p align="center"><img src="https://github.com/hahohe1892/Frank_thk_inv/blob/main/Cover_picture.PNG" alt="drawing" width="500"/></p>
 
-This repository contains the Python code used for the glacier thickness inversion and lake mapping analyses presented in *Unveiling the Hidden Lake-Rich Landscapes Under Earth’s Glaciers* (Frank et al., 2025). Specifically, it performs the inversion including calibration of regional parameters and calculates the locations and depths of lakes that would form if glaciers were to melt completely.  
+This repository contains the Python code used for the glacier thickness inversion and lake mapping analyses presented in *Global glacier-free topography reveals large potential for future lakes in presently ice-covered terrain* (Frank et al., 2026). Specifically, it performs the inversion including calibration of regional parameters and calculates the locations and depths of lakes that would form if glaciers were to melt completely.  
 
 To run the code, clone the repository and ensure that the dependencies listed below are installed.
 
@@ -42,7 +42,7 @@ The glacier thickness inversion is performed by the script `Inversion/code/topg_
 
 Beyond IGM and its dependencies, the Bayesian calibration requires the [bayesian-optimization package](https://bayesian-optimization.github.io/BayesianOptimization/3.1.0/) [v2.0](https://github.com/bayesian-optimization/BayesianOptimization/releases/tag/v2.0.0) (Nogueira, 2014) to be installed. The script `Inversion/code/prepro.py` handles preprocessing and is also a module of IGM, while `Inversion/code/loop_script.sh` is a bash script to do the inversion for several glaciers sequentially.
 
-The script `Inversion/code/optimizer.py` is a wrapper that perfoms Bayesian calibration of model parameters for a set of glaciers by iteratively running the thickness inversion and minimizing a cost function. The cost function is eq. (4) in Frank et al. (2025). To run the example provided, follow these steps:
+The script `Inversion/code/optimizer.py` is a wrapper that perfoms Bayesian calibration of model parameters for a set of glaciers by iteratively running the thickness inversion and minimizing a cost function. The cost function is eq. (4) in Frank et al. (2026). To run the example provided, follow these steps:
 
 After successful installation of IGM and `bayesian-optimization`, navigate to `Inversion/code`. The necessary input data for five Greenlandic glacier complexes with thickness observations is prepared and stored under `Inversion/Input_data`. Fixed model parameters are defined in `Inversion/code/params.json`.  
 
@@ -60,7 +60,7 @@ This performs the following steps, optimizing the model parameters ice viscosity
 6. Repeats steps 2 - 5 `n=5` times.
 7. Stores the final best combination of parameters and all other tested parameters combinations in `Inversion/code/optimization_logs.log`.
    
-Note that `n=5` is chosen here to prevent excessive computations. In Frank et al. (2025), `n>=30`.
+Note that `n=5` is chosen here to prevent excessive computations. In Frank et al. (2026), `n>=30`.
 
 To only run the inversion for one combination of parameters, manipulate the parameters in `Inversion/code/loop_script.sh` and do
 ```
@@ -107,7 +107,7 @@ The lake mapping runs within seconds on the provided examples.
 
 ## References
 
-1. Frank, T., van Pelt, W. J. J., Rounce, D. R., Jouvet, G., Hock, R.: *Unveiling the Hidden Lake-Rich Landscapes Under Earth’s Glaciers*, in review, 2025.  
+1. Frank, T., van Pelt, W. J. J., Rounce, D. R., Jouvet, G., Hock, R.: *Unveiling the Hidden Lake-Rich Landscapes Under Earth’s Glaciers*, in review, 2026.  
 2. Jouvet, G., Cordonnier, G.: Ice-flow model emulator based on physics-informed deep learning, *Journal of Glaciology*, 115, https://doi.org/10.1017/jog.2023.73, 2023.
 3. Nogueira, F.: Bayesian Optimization: Open source constrained global optimization tool for Python, 2014.
 4. Maussion, F., Butenko, A., Champollion, N., Dusch, M., Eis, J., Fourteau, K., Gregor, P., Jarosch, A. H., Landmann, J., Oesterle, F., Recinos, B., Rothenpieler, T., Vlug, A., Wild, C. T., Marzeion, B.: The Open Global Glacier Model (OGGM) v1.1, *Geoscientific Model Development*, 12, 909931, https://doi.org/10.5194/gmd-12-909-2019, 2019.  
