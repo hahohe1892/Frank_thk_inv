@@ -77,7 +77,7 @@ The input data provided was sourced from two resources, both of them providing a
 To generate custom input data, refer to these resources or others and observe the structure of the provided `foo_input.nc` files.  
 
 ### Output
-The output is stored as a **NetCDF** file in the run folder. It includes:  
+The output is stored as a **NetCDF** file in the output folder. It includes:  
 - Initial conditions  
 - Intermediate inversion steps  
 - Final result at the last time step  
@@ -107,7 +107,7 @@ The lake mapping runs within seconds on the provided examples.
 
 ## References
 
-1. Frank, T., van Pelt, W. J. J., Rounce, D. R., Jouvet, G., Hock, R.: *Unveiling the Hidden Lake-Rich Landscapes Under Earth’s Glaciers*, in review, 2026.  
+1. Frank, T., van Pelt, W. J. J., Rounce, D. R., Jouvet, G., Hock, R.: *Global glacier-free topography reveals large potential for future lakes in presently ice-covered terrain*, Nature Communications, 2026.  
 2. Jouvet, G., Cordonnier, G.: Ice-flow model emulator based on physics-informed deep learning, *Journal of Glaciology*, 115, https://doi.org/10.1017/jog.2023.73, 2023.
 3. Nogueira, F.: Bayesian Optimization: Open source constrained global optimization tool for Python, 2014.
 4. Maussion, F., Butenko, A., Champollion, N., Dusch, M., Eis, J., Fourteau, K., Gregor, P., Jarosch, A. H., Landmann, J., Oesterle, F., Recinos, B., Rothenpieler, T., Vlug, A., Wild, C. T., Marzeion, B.: The Open Global Glacier Model (OGGM) v1.1, *Geoscientific Model Development*, 12, 909931, https://doi.org/10.5194/gmd-12-909-2019, 2019.  
