@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p ../Output_data
+
 for param in RGI60-05.16433 RGI60-05.00613 RGI60-05.03529 RGI60-05.15375 RGI60-05.00746
 do
 	echo "Processing $param"
